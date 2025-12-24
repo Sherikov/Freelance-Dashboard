@@ -8,7 +8,7 @@ Unlike simple calculators, this dashboard accounts for **Taxes**, **Expenses**, 
 ![Project Preview](screenshot.png)
 
 
-[![Live Preview](https://img.shields.io/badge/Live-Preview-brightgreen?style=for-the-badge&logo=html5)](https://YOUR-USERNAME.github.io/freelance-dashboard/)
+[![Live Preview](https://img.shields.io/badge/Live-Preview-brightgreen?style=for-the-badge&logo=html5)](https://sherikov.github.io/Freelance-Dashboard/)
 
 ## ✨ Key Features
 
