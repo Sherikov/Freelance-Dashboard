@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Freelance Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Freelance Dashboard</h1>
+            <p>Financial Planning & Project Tracking</p>
+        </header>
+
+        <main class="dashboard-grid">
+            
+            <section class="card finance-section">
+                <div class="card-header">
+                    <h2>💰 Financial Goals</h2>
+                    <select id="currency-select" class="currency-select">
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="RUB">RUB (₽)</option>
+                        <option value="KZT">KZT (₸)</option>
+                        <option value="GBP">GBP (£)</option>
+                    </select>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Desired Net Income (Monthly)</label>
+                        <input type="number" id="income" placeholder="2000">
+                    </div>
+                    <div class="form-group">
+                        <label>Monthly Expenses</label>
+                        <input type="number" id="expenses" placeholder="500">
+                    </div>
+                    <div class="form-group">
+                        <label>Tax Rate (%)</label>
+                        <input type="number" id="tax-rate" placeholder="0" min="0" max="99">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Hours per Day</label>
+                        <input type="number" id="hours-day" value="6" min="1" max="24">
+                    </div>
+                    <div class="form-group">
+                        <label>Days per Week</label>
+                        <input type="number" id="days-week" value="5" min="1" max="7">
+                    </div>
+                </div>
+
+                <div class="rate-result">
+                    <span>Minimum Hourly Rate (Gross):</span>
+                    <div id="hourly-rate" class="big-number">$0.00/h</div>
+                    <small id="tax-info" class="tax-hint">Includes 0% tax buffer</small>
+                </div>
+            </section>
+
+            <section class="card projects-section">
+                <h2>🚀 Project Calculator</h2>
+                
+                <div class="add-project-form no-print">
+                    <div class="form-row">
+                        <input type="text" id="project-name" placeholder="Project Name (e.g. Website Redesign)">
+                        <input type="number" id="project-hours" placeholder="Hours" style="width: 100px;">
+                    </div>
+                    <button id="add-project-btn">Add Project</button>
+                </div>
+
+                <div class="projects-summary">
+                    <div class="summary-item">
+                        <span>Pending:</span>
+                        <span id="total-pending" class="val-pending">0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Paid:</span>
+                        <span id="total-paid" class="val-paid">0.00</span>
+                    </div>
+                </div>
+
+                <div id="projects-list" class="projects-list">
+                    </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
